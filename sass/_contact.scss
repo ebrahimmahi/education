@@ -1,0 +1,73 @@
+.contact{
+    background: #333;
+
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 0;
+
+        img{
+            width: 50vw;
+            height: 70vh;
+        }
+    }
+    .form-container{
+        width: 50%;
+        padding-right: 6rem;
+
+        input,
+        textarea{
+            height: 4rem;
+            width: 100%;
+            background: #fff;
+            border: none;
+            border-radius: 5rem;
+            padding: 0 1rem;
+            margin: 1rem 0;
+            color: $pink;
+            font-size: 1.7rem;
+            transition: .2s linear;
+
+            &:focus{
+                border: .2rem solid $pink;
+            }
+            
+        }
+        textarea{
+            height: 20rem;
+            border-radius: 1rem;
+            padding: 1rem;
+            resize: none;
+        }
+        input[type= "submit"]{
+            width: 17rem;
+            background: $pink;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2rem;
+
+            &:hover{
+                background: none;
+                color: $pink;
+                border: .2rem solid $pink;
+            }
+        }
+    }
+    @include responsive(tab){
+        .row{
+            flex-flow: column;
+
+            img{
+                width: 90vw;
+                height: 50vh;
+            }
+            
+            .form-container{
+                width: 90%;
+                padding:0;
+            }  
+        }
+    }
+}
+

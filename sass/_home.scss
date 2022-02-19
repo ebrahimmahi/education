@@ -1,0 +1,117 @@
+.home{
+    min-height: 100vh;
+    background: linear-gradient(rgba(198,59,250,.8), rgba(198,59,250,.8)), url(../img/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        padding-top: 14rem;
+        padding-bottom: 8rem;
+        text-align: center;
+
+        h2{
+            font-size: 5rem;
+            color: #fff;
+            padding: 0 1rem;
+            text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 2rem;
+            color: #eee;
+            padding: 1rem 25rem;
+        }
+        button{
+            height: 4rem;
+            width: 20rem;
+            border-radius: 5rem;
+            background: $pink;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 .3rem 1rem rgba(0,0,0,.3);
+
+            &:hover{
+                letter-spacing: .2rem;
+            }
+        }
+    }
+    .box-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .box{
+            box-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+            height: 20rem;
+            width: 25rem;
+            background: #fff;
+            text-align: center;
+            border-radius: 1rem;
+            margin: 2rem;
+            cursor: pointer;
+
+            &:hover i{
+                background: $pink;
+            }
+            &:hover h3{
+                color: $violet;
+            }
+
+
+            i{
+                height: 6rem;
+                width: 6rem;
+                line-height: 6rem;
+                text-align: center;
+                border-radius: 50%;
+                color: #fff;
+                background: $violet;
+                font-size: 3rem;
+                margin: 2rem 0;
+            }
+            h3{
+                font-size: 2rem;
+                color: $pink;
+            }
+            p{
+                font-size: 1.3rem;
+                padding: .7rem 2rem;
+                color: #666;
+            }
+        }
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        border-top: 70vh solid #fff;
+        width: 120%;
+        bottom: -25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        z-index: -1;
+    }
+}
+
+@include responsive(tab){
+    .home {
+        .content{
+            p{
+                padding: 1.5rem 2rem;
+            }
+        }
+        &::before{
+            display: none;
+        }
+    }
+}

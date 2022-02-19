@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    transition: .2s;
+}
+
+*::selection{
+    background: $pink;
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+@include responsive(tab){
+    html{
+        font-size: 55%;
+    }
+}
+section{
+    padding: 5rem 0;
+}
+
+.heading{
+    font-size: 4rem;
+    color: $pink;
+    text-align: center;
+    padding: 0 1rem;
+    font-weight: 500;
+}
+.title{
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+}

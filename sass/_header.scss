@@ -1,0 +1,103 @@
+header{
+    width: 96%;
+    background: #fff;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+
+    &.header-active{
+        top: 0;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: 0 .1rem .3rem rgba(0,0,0,0.3);
+    }
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            
+            li{
+                margin: 0 1rem;
+
+                a{
+                    font-size: 2rem;
+                    color: $pink;
+                    
+                    &.active,
+                    &:hover{
+                        color: $violet;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .logo{
+        font-size: 2.5rem;
+        color: $violet;
+        text-transform: uppercase;
+
+        i{
+            color: $pink;
+            padding: 0 .2rem;
+        }
+    }
+    .fa-bars{
+        font-size: 3rem;
+        color: $pink;
+        cursor: pointer;
+        display: none;
+    }
+    .fa-times{
+        transform: rotate(180deg);
+        color: $violet;
+    }
+
+}
+@include responsive(tab){
+    header{
+        .fa-bars{
+            display: block;
+        }
+        .navbar{
+            position: fixed;
+            top: -100rem;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-radius: 1rem;
+            opacity: 0;
+
+            ul{
+                flex-flow: column;
+                padding: 2rem 0;
+
+                li{
+                    margin: 1rem 0;
+                    width: 100%;
+                    text-align: center;
+
+                    a{
+                        font-size: 3rem;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .nav-toggle{
+            top: 5.5rem;
+            opacity: 1;
+        }
+        
+    }
+}

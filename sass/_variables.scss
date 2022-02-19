@@ -1,0 +1,12 @@
+// color 
+$pink: #ff046f;
+$violet: #c63bfa;
+
+//media queries
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == tab{
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+}

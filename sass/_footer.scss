@@ -1,0 +1,34 @@
+.footer{
+    text-align: center;
+    padding: 1rem 0 3rem 0;
+    .icons{
+
+        a{
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.2rem;
+            text-align: center;
+            border-radius: 50%;
+            color: $violet;
+            border: .2rem solid $violet;
+            font-size: 3rem;
+            margin: 2.5rem .1rem;
+
+            &:hover{
+                color: #fff;
+                background: $pink;
+                border-color: $pink;
+            }
+        }
+    }
+    .credit{
+        font-size: 2rem;
+        margin: 0 auto;
+        color: #666;
+        width: 90%;
+
+        span{
+            color: $pink;
+        }
+    }
+}

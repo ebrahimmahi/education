@@ -1,0 +1,55 @@
+.about{
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 70vh;
+            width: 50vw;
+        }
+
+        .content{
+            padding-left: 5rem;
+            h3{
+                font-size: 3rem;
+                color: $pink;
+            }
+            p{
+                font-size: 1.6rem;
+                color: #999;
+                padding: 1rem 0;
+            }
+            button{
+                height: 3.5rem;
+                width: 17rem;
+                background: $violet;
+                color: #fff;
+                border: none;
+                border-radius: 5rem;
+                box-shadow: 0 .3rem 1rem rgba(0,0,0,0.3);
+                cursor: pointer;
+                font-size: 2rem;
+
+                &:hover{
+                    letter-spacing: .2rem;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+@include responsive(tab){
+    .about{
+        .row{
+            flex-flow: column-reverse;
+            img{
+                width: 90vw;
+                height: 60vh;
+            }
+            .content{
+                padding: 0 2.5rem;                
+            }
+        }
+    }
+}
